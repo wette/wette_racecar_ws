@@ -21,3 +21,21 @@
 [submodule "src/f1tenth_gym_ros"]
 	path = src/f1tenth_gym_ros
 	url = https://github.com/Autonomous-Racing-Labs/f1tenth_gym_ros.git
+	branch = master
+[submodule "src/cartographer"]
+	path = src/cartographer
+	url = git@github.com:wette/f1tenth_cartographer.git
+	branch = master
+[submodule "src/cartographer_ros"]
+	path = src/cartographer_ros
+	url = git@github.com:wette/f1tenth_cartographer_ros.git
+	branch = master
+[submodule "src/raceline"]
+	path = src/raceline
+	url = git@github.com:wette/f1tenth_raceline.git
+	branch = master
+[submodule "src/gap_follow"]
+	path = src/gap_follow
+	url = git@github.com:wette/f1tenth_gap_follow.git
+	branch = master
+
