@@ -2,8 +2,8 @@
 
 ## Clone
 ```
-git clone git@github.com:Autonomous-Racing-Labs/f1tenth_racecar_ws.git
-cd f1tenth_racecar_ws
+git git@github.com:wette/wette_racecar_ws.git
+cd wette_racecar_ws
 git submodule init
 git submodule update
 ```
