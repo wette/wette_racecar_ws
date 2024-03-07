@@ -43,3 +43,7 @@ ros2 launch cartographer_ros cartographer_existing_map.launch.py map_filename:=/
 
 ### TODO: Use existing map and detect changes
 tbd.
+
+## Helpful resources
+- https://guni91.wordpress.com/2020/12/05/cartographer-ros2-installation/
+- https://google-cartographer-ros.readthedocs.io/en/latest/algo_walkthrough.html
