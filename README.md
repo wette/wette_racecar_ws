@@ -44,6 +44,21 @@ ros2 launch cartographer_ros cartographer_existing_map.launch.py map_filename:=/
 ### TODO: Use existing map and detect changes
 tbd.
 
+## Create a Map using slam_toolbox (works quite good)
+Start Slam Toolbox with command
+```
+ros2 launch slam_toolbox online_async_launch.py slam_params_file:=/root/wette_racecar_ws/mapper_params_online_async.yaml
+```
+Open rviz and add the SlamToobox Panel (Panels --> Add new panels). You can find a "save to file" button there.
+
+### Localize in that map using nav2 (works quite good)
+
+```
+ros2 launch mapping_localization/localization_launch.py params_file:=mapping_localization/nav2_params.yaml map:=mapping_localization/MindenCitySpeedway_slam_toolbox.yaml
+```
+
+
+
 ## Helpful resources
 - https://guni91.wordpress.com/2020/12/05/cartographer-ros2-installation/
 - https://google-cartographer-ros.readthedocs.io/en/latest/algo_walkthrough.html
