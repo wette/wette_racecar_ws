@@ -19,9 +19,9 @@ slam_toolbox:
     # if you'd like to immediately start continuing a map at a given pose
     # or at the dock, but they are mutually exclusive, if pose is given
     # will use pose
-    map_file_name: /home/wette/wette_racecar_ws/MindenCitySpeedway_slam_toolbox
-    # map_start_pose: [0.0, 0.0, 0.0]
-    map_start_at_dock: true
+    map_file_name: /home/wette/wette_racecar_ws/testmap
+    map_start_pose: [5.0, 0.6, -1.0]
+    #map_start_at_dock: true
 
     debug_logging: false
     throttle_scans: 1
@@ -33,7 +33,7 @@ slam_toolbox:
     transform_timeout: 0.2
     tf_buffer_duration: 30.0
     stack_size_to_use: 40000000 #// program needs a larger stack size to serialize large maps
-    enable_interactive_mode: true
+    enable_interactive_mode: false #true
 
     # General Parameters
     use_scan_matching: true
