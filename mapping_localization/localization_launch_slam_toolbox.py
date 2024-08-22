@@ -33,13 +33,13 @@ def generate_launch_description():
                         PythonLaunchDescriptionSource([
                             FindPackageShare("slam_toolbox"), '/launch', '/online_async_launch.py']),
                         launch_arguments={
-                                            "slam_params_file" : "/home/wette/wette_racecar_ws/mapping_localization/localization_params_online_async.yaml"
+                                            "slam_params_file" : "/root/wette_racecar_ws/mapping_localization/localization_params_online_async.yaml"
                                         }.items()
                         )
 
 
     # finalize
-    ld.add_action(vesc_to_odom_node)
+    #ld.add_action(vesc_to_odom_node) #only required when processing a bag recorded with old vesc_to_odom_node
     ld.add_action(localizer)
 
     return ld
