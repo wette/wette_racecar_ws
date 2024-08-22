@@ -13,7 +13,7 @@ git submodule update
 colcon build
 ```
 
-## Create a Map
+## Create a Map using google cartographer (works ok, but slam_toolbox works better)
 ### Map From Scratch
 To create a new map from scratch, we need to run cartographer in map-creation-mode, and let the vehicle drive slowly through the racetrack using gap_follow.
 ```
@@ -41,22 +41,25 @@ ros2 launch vehicle_control vehicle_control_launch.py
 ros2 launch cartographer_ros cartographer_existing_map.launch.py map_filename:=/root/cartographer_ws/map.pbstream
 ```
 
-### TODO: Use existing map and detect changes
-tbd.
+
 
 ## Create a Map using slam_toolbox (works quite good)
 Start Slam Toolbox with command
 ```
-ros2 launch slam_toolbox online_async_launch.py slam_params_file:=/root/wette_racecar_ws/mapper_params_online_async.yaml
+ros2 launch slam_toolbox online_async_launch.py slam_params_file:=/root/wette_racecar_ws/mapping_localization/mapper_params_online_async.yaml
 ```
 Open rviz and add the SlamToobox Panel (Panels --> Add new panels). You can find a "save to file" button there.
 
-### Localize in that map using nav2 (works quite good)
+### Localize in that map using slam_toolbox (has its own problems due to non-fixed map clashing with a fixed raceline)
 
 ```
-ros2 launch mapping_localization/localization_launch.py params_file:=mapping_localization/nav2_params.yaml map:=mapping_localization/MindenCitySpeedway_slam_toolbox.yaml
+ros2 launch slam_toolbox online_async_launch.py slam_params_file:=/root/wette_racecar_ws/mapping_localization/localization_params_online_async.yaml
 ```
 
+### Localize in that map using AMCL Montecarlo Localization (from the nav2 stack - works quite good)
+```
+ros2 launch mapping_localization/localization_launch_amcl.py params_file:=mapping_localization/nav2_params.yaml map:=MindenCitySpeedway0408.yaml
+```
 
 
 ## Helpful resources
