@@ -39,3 +39,9 @@
 	url = git@github.com:wette/f1tenth_gap_follow.git
 	branch = master
 
+[submodule "src/aesthetic_control"]
+	path = src/aesthetic_control
+	url = https://github.com/Autonomous-Racing-Labs/aesthetic_control.git
+[submodule "src/camera_ros"]
+	path = src/camera_ros
+	url = https://github.com/Autonomous-Racing-Labs/camera_ros.git
