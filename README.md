@@ -61,6 +61,7 @@ ros2 launch slam_toolbox online_async_launch.py slam_params_file:=/root/wette_ra
 ros2 launch mapping_localization/localization_launch_amcl.py params_file:=mapping_localization/nav2_params.yaml map:=MindenCitySpeedway0408.yaml
 ```
 
+If the map does not show up in rviz2, set Map->Topic->"Durability Policy" to "Transient Local" in the left rviz control pane.
 
 ## Helpful resources
 - https://guni91.wordpress.com/2020/12/05/cartographer-ros2-installation/
